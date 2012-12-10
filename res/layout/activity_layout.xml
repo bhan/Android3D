@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TableLayout android:id="@+id/viewGroup_data"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+    >
+    	<TableRow>
+    		<TextView android:id="@+id/textView_data" 
+        		android:layout_width="0dp"
+        		android:layout_height="wrap_content"
+        		android:layout_weight="1"/>
+    		<TextView android:id="@+id/textView_pos"
+    		    android:layout_width="0dp"
+    		    android:layout_height="wrap_content"
+    		    android:layout_weight="1" />
+    		</TableRow>
+	</TableLayout>
+	<FrameLayout
+	    android:id="@+id/game_container"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+	>
+	    <com.nea.nehe.lesson10.Lesson10
+		    android:id="@+id/custom_glSurfaceView"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent" />
+	    <!--<ImageView 
+	        android:id="@+id/head_indicator"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/icon"
+	        android:contentDescription="@string/head_indicator"
+	        />-->
+	    <com.nea.nehe.lesson10.OrientationIndicator 
+	        android:id="@+id/orientation_indicator"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" />	    
+	</FrameLayout>
+</LinearLayout>
